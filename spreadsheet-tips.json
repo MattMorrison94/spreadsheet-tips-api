@@ -1,0 +1,176 @@
+[
+    {
+      "id": "formula-001",
+      "name": "VLOOKUP",
+      "category": "Lookup & Reference",
+      "description": "Looks for a value in the first column of a table array and returns a value in the same row from a column you specify.",
+      "example": "=VLOOKUP(\"Smith\", A2:C20, 3, FALSE)",
+      "useCase": "Find an employee's salary by looking up their name in a table.",
+      "isFavorite": false,
+      "tipType": "Formulas",
+      "syntaxVariants": [
+        {
+          "id": "syntax-001",
+          "platform": "Excel",
+          "syntax": "=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])",
+          "notes": "range_lookup is TRUE by default (approximate match)"
+        },
+        {
+          "id": "syntax-002",
+          "platform": "Google Sheets",
+          "syntax": "=VLOOKUP(search_key, range, index, [is_sorted])",
+          "notes": "is_sorted is TRUE by default (approximate match)"
+        },
+        {
+          "id": "syntax-003",
+          "platform": "Apple Numbers",
+          "syntax": "=VLOOKUP(lookup_value; table; column_index; [exact_match])",
+          "notes": "Uses semicolons instead of commas"
+        }
+      ]
+    },
+    {
+      "id": "feature-001",
+      "name": "Pivot Table",
+      "category": "Pivot Tables",
+      "description": "A tool that summarizes and reorganizes selected data to reveal patterns and relationships within your data.",
+      "example": "Summarize sales by region and product category",
+      "useCase": "Analyze large datasets to identify trends and create summary reports.",
+      "isFavorite": false,
+      "tipType": "Features",
+      "implementations": [
+        {
+          "id": "impl-001",
+          "platform": "Excel",
+          "instructions": "1. Select your data range\n2. Go to Insert tab > PivotTable\n3. Choose where to place the PivotTable\n4. Drag fields to the Row, Column, Values, or Filter areas",
+          "notes": "Use the PivotTable Fields pane to customize your view"
+        },
+        {
+          "id": "impl-002",
+          "platform": "Google Sheets",
+          "instructions": "1. Select your data range\n2. Go to Data > Pivot table\n3. In the sidebar, add rows, columns, values, and filters",
+          "notes": "Can also use Insert > Pivot table"
+        },
+        {
+          "id": "impl-003",
+          "platform": "Apple Numbers",
+          "instructions": "1. Select a cell within your data table\n2. Choose Data > Pivot Table (or click Table button in toolbar)\n3. Configure categories and values in the sidebar",
+          "notes": "Numbers creates a new sheet for the Pivot Table"
+        }
+      ]
+    },
+    {
+      "id": "formula-002",
+      "name": "IF",
+      "category": "Logical",
+      "description": "Runs a logical test and returns one value for TRUE result, and another for FALSE result.",
+      "example": "=IF(A1>10, \"High\", \"Low\")",
+      "useCase": "Categorize values as 'High' if greater than 10, otherwise 'Low'.",
+      "isFavorite": false,
+      "tipType": "Formulas",
+      "syntaxVariants": [
+        {
+          "id": "syntax-004",
+          "platform": "Excel",
+          "syntax": "=IF(logical_test, value_if_true, [value_if_false])"
+        },
+        {
+          "id": "syntax-005",
+          "platform": "Google Sheets",
+          "syntax": "=IF(logical_expression, value_if_true, value_if_false)"
+        },
+        {
+          "id": "syntax-006",
+          "platform": "Apple Numbers",
+          "syntax": "=IF(logical_test; value_if_true; [value_if_false])",
+          "notes": "Uses semicolons instead of commas"
+        }
+      ]
+    },
+    {
+      "id": "formula-003",
+      "name": "SUMIF",
+      "category": "Math & Trig",
+      "description": "Adds the numbers in a range that meet a single condition.",
+      "example": "=SUMIF(A2:A10, \">10\", B2:B10)",
+      "useCase": "Sum all sales amounts where the quantity is greater than 10.",
+      "isFavorite": false,
+      "tipType": "Formulas",
+      "syntaxVariants": [
+        {
+          "id": "syntax-007",
+          "platform": "Excel",
+          "syntax": "=SUMIF(range, criteria, [sum_range])"
+        },
+        {
+          "id": "syntax-008",
+          "platform": "Google Sheets",
+          "syntax": "=SUMIF(range, criterion, [sum_range])"
+        },
+        {
+          "id": "syntax-009",
+          "platform": "Apple Numbers",
+          "syntax": "=SUMIF(range; condition; sum_range)",
+          "notes": "Uses semicolons and requires all parameters"
+        }
+      ]
+    },
+    {
+      "id": "formula-004",
+      "name": "TEXTJOIN",
+      "category": "Text",
+      "description": "Combines text from multiple ranges or strings with a delimiter.",
+      "example": "=TEXTJOIN(\", \", TRUE, A1:A3)",
+      "useCase": "Combine first, middle, and last names into a single full name column.",
+      "isFavorite": false,
+      "tipType": "Formulas",
+      "syntaxVariants": [
+        {
+          "id": "syntax-010",
+          "platform": "Excel",
+          "syntax": "=TEXTJOIN(delimiter, ignore_empty, text1, [text2], …)"
+        },
+        {
+          "id": "syntax-011",
+          "platform": "Google Sheets",
+          "syntax": "=TEXTJOIN(delimiter, ignore_empty, text1, [text2], …)"
+        },
+        {
+          "id": "syntax-012",
+          "platform": "Apple Numbers",
+          "syntax": "=TEXTJOIN(delimiter; ignore_empty; text1; …)",
+          "notes": "Uses semicolons instead of commas"
+        }
+      ]
+    },
+    {
+      "id": "feature-002",
+      "name": "Conditional Formatting",
+      "category": "Formatting",
+      "description": "Applies formatting (e.g. color) based on cell values or conditions.",
+      "example": "Highlight all sales greater than $5000 in green.",
+      "useCase": "Visually identify high-performing sales or outliers.",
+      "isFavorite": false,
+      "tipType": "Features",
+      "implementations": [
+        {
+          "id": "impl-004",
+          "platform": "Excel",
+          "instructions": "1. Select your range\n2. Go to Home > Conditional Formatting\n3. Choose a rule type and set conditions\n4. Apply formatting",
+          "notes": "Can also use formulas for custom rules"
+        },
+        {
+          "id": "impl-005",
+          "platform": "Google Sheets",
+          "instructions": "1. Select your range\n2. Format > Conditional formatting\n3. Set the condition and formatting style\n4. Click Done",
+          "notes": "Supports custom formulas for advanced rules"
+        },
+        {
+          "id": "impl-006",
+          "platform": "Apple Numbers",
+          "instructions": "1. Select the cells\n2. Format sidebar > Cell > Add a Conditional Highlighting Rule\n3. Choose condition and style",
+          "notes": "Limited compared to Excel and Sheets, but effective for basic use cases"
+        }
+      ]
+    }
+  ]
